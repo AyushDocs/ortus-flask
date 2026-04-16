@@ -1,10 +1,10 @@
 [build-system]
-requires = ["setuptools>=45", "wheel"]
+requires = ["setuptools>=61", "setuptools-scm>=8.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "ortus-flask"
-version = "0.1.2"
+dynamic = ["version"]
 description = "Ortus CMS integration for Flask applications"
 readme = "README.md"
 requires-python = ">=3.8"
@@ -12,6 +12,7 @@ license = {text = "Copyright (c) 2026 Rohindia. All Rights Reserved."}
 authors = [
     {name = "Ayush", email = "ayushalokdubey@gmail.com"},
 ]
+
 classifiers = [
     "Programming Language :: Python :: 3",
     "Framework :: Flask",
@@ -35,3 +36,5 @@ dev = ["pytest", "black", "flake8"]
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["ortus_flask*"]
+[tool.setuptools_scm]
+version_file = "ortus_flask/_version.py"

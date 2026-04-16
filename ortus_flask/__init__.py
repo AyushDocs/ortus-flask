@@ -14,13 +14,18 @@ For custom implementations, use interfaces:
     from ortus_flask.interfaces import BlogModelInterface, BlogRepositoryInterface
     from ortus_flask.implementations import SQLAlchemyBlogRepository, DefaultWebhookHandler
 """
-
 import os
 import logging
+from importlib.metadata import version, PackageNotFoundError
 
 logger = logging.getLogger(__name__)
 
-__version__ = "0.1.2"
+try:
+    __version__ = version("ortus-flask")
+except PackageNotFoundError:
+    __version__ = "0.0.0.dev0"
+
+
 
 # Import submodules
 from . import interfaces
