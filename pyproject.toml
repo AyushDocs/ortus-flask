@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ortus-flask"
+version = "0.1.2"
+description = "Ortus CMS integration for Flask applications"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "flask",
+    "flask-sqlalchemy",
+    "flask-migrate",
+    "flask-cors",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "black", "flake8"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ortus_flask*"]
