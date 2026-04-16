@@ -8,12 +8,27 @@ version = "0.1.2"
 description = "Ortus CMS integration for Flask applications"
 readme = "README.md"
 requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Ayush", email = "ayush@rohindia.com"},
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Framework :: Flask",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
 dependencies = [
     "flask",
     "flask-sqlalchemy",
     "flask-migrate",
     "flask-cors",
 ]
+
+[project.urls]
+"Homepage" = "https://github.com/AyushDocs/ortus-flask"
+"Bug Tracker" = "https://github.com/AyushDocs/ortus-flask/issues"
+
 
 [project.optional-dependencies]
 dev = ["pytest", "black", "flake8"]
